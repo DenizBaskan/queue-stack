@@ -10,9 +10,12 @@ LinkedList* NewLL()
     ll->tail = ll->head;
 
     ll->head->next = 0;
-    ll->tail->next = 0;
     ll->head->prev = 0;
+    ll->head->value = 0;
+
+    ll->tail->next = 0;
     ll->tail->prev = 0;
+    ll->tail->value = 0;
 
     return ll;
 }
