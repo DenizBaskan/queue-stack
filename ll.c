@@ -71,12 +71,10 @@ void LLRemoveLast(LinkedList* ll)
 void FreeLL(LinkedList* ll)
 {
     LLNode* head = ll->head;
-    printf("Size: %d\n", ll->size);
 
     if (ll->size != 0) {
         while (head != 0) {
-            //free(head);
-            printf("Value: %d, next: %p, prev: %p\n", head->value, head->next, head->prev);
+            free(head);
             head = head->next;
         }
     }
