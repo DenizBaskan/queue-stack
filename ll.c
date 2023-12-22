@@ -49,7 +49,8 @@ void LLRemoveFirst(LinkedList* ll)
         ll->head->prev = 0;
     }
 
-    ll->size--;
+    if (ll->size != 0)
+        ll->size--;
 }
 
 void LLRemoveLast(LinkedList* ll)
@@ -65,7 +66,8 @@ void LLRemoveLast(LinkedList* ll)
         ll->tail = prev;
     }
 
-    ll->size--;
+    if (ll->size != 0)
+        ll->size--;
 }
 
 void FreeLL(LinkedList* ll)
